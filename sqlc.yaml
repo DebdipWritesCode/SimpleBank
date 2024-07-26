@@ -1,0 +1,12 @@
+version: "1"  # The version of the SQLC configuration format. Use "1" for the current version.
+packages:
+  - name: "db"  # The name of the Go package where SQLC will generate code. This is the package name used in your Go code.
+    path: "./db/sqlc/"  # The directory where SQLC will output the generated Go code.
+    queries: "./db/query/"  # Path to the directory containing your SQL query files.
+    schema: "./db/migration/"  # Path to your SQL schema files, which define your database schema.
+    engine: "postgresql"  # The SQL engine to use. For PostgreSQL, use "postgresql". It should match the driver you use.
+    emit_json_tags: true  # Generate JSON tags in the Go code for fields. Set to false if not needed.
+    emit_prepared_queries: true  # Generate code for prepared SQL queries. Set to false if not needed.
+    emit_interface: false  # Whether to generate interfaces for the queries. Set to true if you want interfaces.
+    emit_exact_table_names: false  # Whether to generate Go struct fields with exact table names from the schema. Set to true if you need exact matches.
+    emit_empty_slices: false  # Whether to generate Go slices for empty query results. Set to true if you want slices for empty results.
