@@ -1,7 +1,6 @@
 module github.com/DebdipWritesCode/SimpleBank
 
-go 1.22.5
-
+go 1.22.6
 require (
 	github.com/gin-gonic/gin v1.10.0
 	github.com/go-playground/validator/v10 v10.22.0
